@@ -1,0 +1,289 @@
+body {
+    background-image: url('/imgs/fondo2.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    z-index: 10;
+}
+
+#barraInicial {
+    background-color: rgb(238, 202, 148);
+    border: 3px solid rgb(100, 100, 100);
+    position: fixed;
+    z-index: 100;
+}
+
+#barraInicial .navbar-brand img {
+    max-height: 60px;
+}
+
+#barraInicial .dropdown {
+    margin-left: 1px;
+}
+
+#espacio {
+    width: 100%;
+    height: 100px;
+}
+
+#espacio_peque {
+    width: 100%;
+    height: 50px;
+}
+
+#titulo {
+    font-family: "Jua", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#texto {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: x-large;
+}
+
+#posit {
+    width: 250px;
+    margin: auto;
+    margin-top: 10vh;
+    height: fit-content;
+    background-color: #fff9c4;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid #f1e9a9;
+    border-radius: 5px;
+    padding: 20px;
+    line-height: 1.5;
+    position: relative;
+    transform: rotate(-3deg);
+}
+
+#posit::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: skew(-20deg) rotate(-5deg);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+#posit:nth-of-type(1) {
+    background-color: #fff9c4;
+    transform: rotate(-2deg);
+}
+
+#posit:nth-of-type(2) {
+    background-color: #ffc1e3;
+    transform: rotate(3deg);
+}
+
+#posit:nth-of-type(3) {
+    background-color: #dcedc8;
+    transform: rotate(-1deg);
+}
+
+#posit:nth-of-type(4) {
+    background-color: #ffcc80;
+    transform: rotate(2deg);
+}
+
+#positFoto {
+    width: 420px;
+    margin: auto;
+    margin-top: 7vh;
+    height: 30vh;
+    background-image: url('/imgs/gatos/gato3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    transform: rotate(-3deg);
+    padding: 20px;
+    line-height: 1.5;
+}
+
+#positFoto::after {
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: skew(-30deg, -10deg);
+    z-index: -1;
+}
+
+#positFoto2 {
+    width: 420px;
+    margin: auto;
+    margin-top: 7vh;
+    height: 30vh;
+    background-image: url('/imgs/perros/perro3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    transform: rotate(-3deg);
+    padding: 20px;
+    line-height: 1.5;
+}
+
+#positFoto2::after {
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: skew(-30deg, -10deg);
+    z-index: -1;
+}
+
+#papel {
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background: repeating-linear-gradient(#e0e0e0 0px,
+            #e0e0e0 1px,
+            #ffffff 1px,
+            #ffffff 25px);
+}
+
+#papel:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 1px;
+    height: 100%;
+    background: #ff6b6b;
+    z-index: 1;
+}
+
+#papel h1 {
+    position: relative;
+    z-index: 2;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#papel h3 {
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    color: #555;
+}
+
+#papel p {
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    color: #555;
+}
+
+#papel form {
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    color: #555;
+}
+
+.carousel-img {
+    max-height: 15cm;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(90, 90, 90);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3),
+        -20px -20px 30px rgba(255, 255, 255, 0.5);
+}
+
+.custom-accordion-button {
+    background-color: #f5f0e1;
+    color: #5a3e2b;
+    border: none;
+}
+
+.custom-accordion-button:not(.collapsed) {
+    background-color: #e0d6c8;
+    color: #4b3727;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.custom-accordion-button:hover {
+    background-color: #d6c5b5;
+    color: #4b3727;
+}
+
+.accordion-body {
+    background-color: #fdfbf7;
+    color: #5a3e2b;
+}
+
+footer {
+    background-color: #5f3c14;
+    border: 3px solid rgb(100, 100, 100);
+    color: wheat;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+#iconos {
+    height: 30%;
+    width: 30%;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid grey;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: scale(1.10);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#fotoDetalle {
+    width: fit-content;
+    height: 35vh;
+    border-radius: 5px;
+    transform: rotate(-3deg);
+}
+
+@media (max-width: 768px) {
+    #positFoto2 {
+        height: 28vh;
+        width: 320px;
+    }
+
+    #positFoto {
+        height: 24vh;
+        width: 320px;
+    }
+
+    #barraInicial {
+        position: unset;
+        margin-bottom: -100px;
+    }
+
+    .card-img-top {
+        height: fit-content;
+    }
+
+    #fotoDetalle {
+        width: 400px;
+        margin-left: -30px;
+    }
+}
