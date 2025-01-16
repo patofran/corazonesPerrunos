@@ -16,10 +16,10 @@ RUN apt-get update && apt-get install -y \
     && a2enmod rewrite
 
 # Copiar los archivos del proyecto a la imagen Docker
-COPY . /var/www/html
+COPY . /
 
 # Establecer el directorio de trabajo
-WORKDIR /var/www/html
+WORKDIR /
 
 # Instalar Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -28,8 +28,8 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 #RUN composer install --optimize-autoloader --no-dev
 
 # Dar permisos adecuados
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data / \
+    && chmod -R 775 //storage //bootstrap/cache
 
 # Exponer el puerto 80
 EXPOSE 80
