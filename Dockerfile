@@ -25,7 +25,7 @@ WORKDIR /var/www/html
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Instalar las dependencias de Laravel
-RUN composer install --optimize-autoloader --no-dev
+#RUN composer install --optimize-autoloader --no-dev
 
 # Dar permisos adecuados
 RUN chown -R www-data:www-data /var/www/html \
