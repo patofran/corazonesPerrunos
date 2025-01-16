@@ -27,9 +27,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Instalar las dependencias de Laravel
 RUN composer install --optimize-autoloader --no-dev
 
-# Copiar el archivo de configuración de Apache
-COPY ./apache/000-default.conf /etc/apache2/sites-available/000-default.conf
-
 # Dar permisos adecuados
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
