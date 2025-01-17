@@ -10,7 +10,7 @@ return new class extends Migration {
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id('id_usuarios')->primary();
-            $table->dni('dni', 15)->unique();
+            $table->string('dni', 15)->unique();
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('correo');

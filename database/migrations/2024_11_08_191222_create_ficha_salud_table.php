@@ -9,7 +9,7 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('ficha_salud', function (Blueprint $table) {
             $table->id('idFicha');
-            $table->BigInteger('idMascota');
+            $table->unsignedBigInteger('idMascota');
             $table->foreign('idMascota')->references('idMascota')->on('mascotas')->onDelete('cascade');
             $table->integer('MicroChip');
             $table->longText('vacunasPuestas');

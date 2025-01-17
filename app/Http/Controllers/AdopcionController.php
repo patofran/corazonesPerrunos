@@ -19,7 +19,7 @@ class AdopcionController {
         $usuario = Session::get('usuario');
 
         $idUsuario = $usuario->id_usuarios;
-
+        
         DB::table('adopciones')->insert([
             'id_usuarios' => $idUsuario,
             'idMascota' => $idMascota,
