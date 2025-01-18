@@ -7,6 +7,7 @@ use App\Http\Controllers\listaMacotasController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DonacionesController;
 use App\Http\Controllers\AdopcionController;
+use App\Http\Controllers\detalleAdminController;
 
 Route::get('/', [inicio::class, 'index'])->name('inicio');
 
@@ -19,6 +20,12 @@ Route::get('/donaciones', [DonacionesController::class, 'donaciones'])->name('do
 Route::get('/listaMascota', [listaMacotasController::class, 'index'])->name('listaMascota');
 
 Route::get('/mascota/{id}', [MascotaController::class, 'show'])->name('mascota.show');
+
+Route::get('/EditMascota/{id}', [detalleAdminController::class, 'Edit'])->name('mascota.edit');
+
+Route::post('/detalleAdmin/{id}/update', [detalleAdminController::class, 'updateFichaSalud'])->name('detalleAdmin.update');
+
+Route::post('/detalleAdmin/{id}/delete', [detalleAdminController::class, 'deleteMascota'])->name('detalleAdmin.delete');
 
 Route::get('/adoptar/{idMascota}', [AdopcionController::class, 'adoptar'])->name('adopciones');
 

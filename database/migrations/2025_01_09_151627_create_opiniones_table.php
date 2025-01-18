@@ -13,6 +13,7 @@ class CreateOpinionesTable extends Migration {
             $table->foreign('id_usuarios')->references('id_usuarios')->on('usuarios')->onDelete('cascade');
             $table->foreign('idMascota')->references('idMascota')->on('mascotas')->onDelete('cascade');
             $table->string('nombre_usuario');
+            $table->string('nombre_mascota');
             $table->string('foto_mascota');
             $table->text('comentario');
         });

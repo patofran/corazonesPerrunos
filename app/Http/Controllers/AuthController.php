@@ -60,7 +60,7 @@ class AuthController {
         $idUsuario = $usuario->id_usuarios;
         
         $mascotasAdoptadas = Mascota::join('adopciones', 'mascotas.idMascota', '=', 'adopciones.idMascota')
-            ->where('adopciones.id_usuario', $idUsuario)
+            ->where('adopciones.id_usuarios', $idUsuario)
             ->get(['mascotas.*']);
 
         return view('perfil', [

@@ -28,10 +28,9 @@
                     <button class="btn btn-lg dropdown-toggle btn-outline-Dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Donde quieres ir?
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Inicio.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('donaciones') }}">Donaciones.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas.</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('donaciones') }}">Donaciones</a></li>
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas</a></li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +67,7 @@
             @endif
             <div class="col-md-3 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <a href="{{ url('/mascota/' . $mascota->idMascota) }}">
+                    <a href="{{ url('/EditMascota/' . $mascota->idMascota) }}">
                         <img src="{{ $mascota->foto_mascotas }}" class="card-img-top" alt="Foto de {{ $mascota->nombre }}" style="height: 200px; object-fit: cover;">
                     </a>
                     <div class="card-body text-center" id="papel">

@@ -28,10 +28,9 @@
                     <button class="btn btn-lg dropdown-toggle btn-outline-Dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Donde quieres ir?
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Inicio.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('donaciones') }}">Donaciones.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas.</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('donaciones') }}">Donaciones</a></li>
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,7 +111,9 @@
                         @endforeach
                     </ul>
                     @else
-                    <li id="texto">No tiene ninguna vacuna pendiente.</li>
+                        <ul>
+                            <li id="texto">No tiene ninguna vacuna pendiente.</li>
+                        </ul>
                     @endif
                 </div>
             </div>

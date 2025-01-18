@@ -28,10 +28,9 @@
                     <button class="btn btn-lg dropdown-toggle btn-outline-Dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Donde quieres ir?
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Inicio.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('donaciones') }}">Donaciones.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas.</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('donaciones') }}">Donaciones</a></li>
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +54,7 @@
     <nav id="espacio">
     </nav>
 
-    @if ($usuario->id_usuarios == 10000000)
+    @if ($usuario->id_usuarios == 1)
     <div class="alert alert-info text-center">
         <h2 id="Titulo">Apartado para administradores.</h2>
         <p id="texto">¿Quieres hacer alguna modificación sobre alguna de las mascotas? <br> puedes entrar <a href="{{route('listaMascotaAdmin')}}">aqui</a>.</p>

@@ -13,5 +13,5 @@ class Adopcion extends Model{
     
     public $timestamps = true;
 
-    protected $fillable = [ 'id_usuarios', 'idMascota',];
+    protected $fillable = [ 'id_usuario', 'idMascota',];
 }

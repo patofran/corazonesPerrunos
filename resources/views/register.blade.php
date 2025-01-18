@@ -28,10 +28,9 @@
                     <button class="btn btn-lg dropdown-toggle btn-outline-Dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Donde quieres ir?
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Inicio.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('donaciones') }}">Donaciones.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas.</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('donaciones') }}">Donaciones</a></li>
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas</a></li>
                     </ul>
                 </div>
             </div>
@@ -64,7 +63,7 @@
             <ul>
                 @foreach ($errors->all() as $error)
                 <li>
-                    <p id="texto">{{ $error }}</p>
+                    <p id="texto">Algo no esta puesto como lo esperado, por favor revise los datos.</p>
                 </li>
                 @endforeach
             </ul>
@@ -73,41 +72,41 @@
 
         <form action="{{ route('register.post') }}" method="POST" class="mt-4">
             @csrf
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="dni" class="form-label">
                     <h3 id="titulo">DNI.</h3>
                 </label>
-                <input type="text" class="form-control" id="dni" name="dni" placeholder="Introduce tu DNI" required>
+                <input type="text" class="form-control text-center" id="dni" name="dni" placeholder="Introduce tu DNI" required>
             </div>
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="nombre" class="form-label">
                     <h3 id="titulo">Nombre.</h3>
                 </label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
+                <input type="text" class="form-control text-center" id="nombre" name="nombre" placeholder="Introduce tu nombre" required>
             </div>
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="apellidos" class="form-label">
                     <h3 id="titulo">Apellidos.</h3>
                 </label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" required>
+                <input type="text" class="form-control text-center" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos" required>
             </div>
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="correo" class="form-label">
                     <h3 id="titulo">Correo Electronico.</h3>
                 </label>
-                <input type="email" class="form-control" id="correo" name="correo" placeholder="Introduce tu correo" required>
+                <input type="email" class="form-control text-center" id="correo" name="correo" placeholder="Introduce tu correo" required>
             </div>
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="telefono" class="form-label">
                     <h3 id="titulo">Telefono.</h3>
                 </label>
-                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
+                <input type="text" class="form-control text-center" id="telefono" name="telefono" placeholder="Introduce tu teléfono" required>
             </div>
-            <div class="mb-3">
+            <div class="p-5">
                 <label for="contrasena" class="form-label">
                     <h3 id="texto">Contraseña (Debe tener al menos 6 caracteres.)</h3>
                 </label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña" required>
+                <input type="password" class="form-control text-center" id="contrasena" name="contrasena" placeholder="Introduce tu contraseña" required>
             </div>
 
             <button type="submit" class="btn btn-success p-3" id="titulo">

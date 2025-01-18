@@ -28,10 +28,9 @@
                     <button class="btn btn-lg dropdown-toggle btn-outline-Dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Donde quieres ir?
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/">Inicio.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('donaciones') }}">Donaciones.</a></li>
-                        <li><a class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas.</a></li>
+                    <ul class="dropdown-menu text-center">
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('donaciones') }}">Donaciones</a></li>
+                        <li><a id="listaEnlaces" class="dropdown-item" href="{{ route('listaMascota') }}">Listado de las mascotas</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,7 +55,7 @@
     </nav>
 
     <nav class="container text-center mt-5" id="papel">
-        <h1 id="titulo">Bienvenidos a coracones Perrunos.</h1>
+        <h1 id="titulo">Bienvenidos a corazones Perrunos.</h1>
         <br>
         <h3 id="texto">
             Una web en la que las personas puedan tener más facilidades para encontrar mascotas y compañeros de una manera más justa y responsable.

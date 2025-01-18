@@ -256,10 +256,27 @@ footer {
 }
 
 #fotoDetalle {
-    width: fit-content;
+    width: min-content;
     height: 35vh;
     border-radius: 5px;
     transform: rotate(-3deg);
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-control, .form-select {
+    background-color: rgb(250, 250, 250);
+    border: 2px solid gray;
+    text-align: center;
+}
+
+#listaEnlaces:hover {
+    background-color: rgb(241, 223, 195);
 }
 
 @media (max-width: 768px) {
